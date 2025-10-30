@@ -1,0 +1,155 @@
+/* ---- ESTILO GENERAL ---- */
+:root {
+  --primary-color: #4b6cb7;
+  --secondary-color: #182848;
+  --background-color: #f5f7fa;
+  --text-color: #333;
+  --radius: 12px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--text-color);
+}
+
+/* ---- CONTENEDOR PRINCIPAL ---- */
+.container {
+  background-color: white;
+  width: 90%;
+  max-width: 420px;
+  padding: 40px 30px;
+  border-radius: var(--radius);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  animation: fadeIn 0.6s ease;
+}
+
+/* ---- ENCABEZADOS ---- */
+h1, h2 {
+  color: var(--secondary-color);
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+/* ---- FORMULARIO ---- */
+form {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+label {
+  font-size: 14px;
+  color: #555;
+  margin: 8px 0 5px;
+}
+
+input {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: var(--radius);
+  font-size: 15px;
+  transition: all 0.3s ease;
+}
+
+input:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 6px rgba(75, 108, 183, 0.4);
+}
+
+/* ---- BOTONES ---- */
+button {
+  background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+  color: white;
+  border: none;
+  border-radius: var(--radius);
+  padding: 12px;
+  font-size: 16px;
+  margin-top: 15px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* ---- ENLACES ---- */
+p {
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* ---- LISTA CRUD ---- */
+ul {
+  list-style: none;
+  margin-top: 20px;
+  text-align: left;
+}
+
+li {
+  background-color: #eef2f7;
+  margin: 8px 0;
+  padding: 12px;
+  border-radius: var(--radius);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+li button {
+  background: none;
+  border: none;
+  color: var(--primary-color);
+  font-size: 14px;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+li button:hover {
+  color: var(--secondary-color);
+}
+
+/* ---- ANIMACIÓN ---- */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ---- RESPONSIVE ---- */
+@media (max-width: 480px) {
+  .container {
+    padding: 25px 20px;
+  }
+
+  h1, h2 {
+    font-size: 22px;
+  }
+
+  button {
+    font-size: 15px;
+  }
+}
